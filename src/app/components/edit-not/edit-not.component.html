@@ -1,0 +1,23 @@
+<app-navigation></app-navigation>
+<h1>Edit Notification</h1>
+
+<form [formGroup]="form">
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" formControlName="description" required>
+    </div>
+    <div>
+      <label for="issuer">Issuer:</label>
+      <input type="text" id="issuer" name="issuer" formControlName="issuer" required>
+    </div>
+    <div>
+      <label for="receptor">Receptor:</label>
+      <input type="text" id="receptor" name="receptor" formControlName="receptor" required>
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" formControlName="state" required>
+    </div>
+    <button type="submit" (click)="editNot()">Save</button>
+  </form>
+

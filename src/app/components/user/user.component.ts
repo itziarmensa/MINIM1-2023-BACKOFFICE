@@ -70,4 +70,8 @@ export class UserComponent implements OnInit{
     this.getUsers();
   }
 
+  viewNots(user: any) {
+    this._router.navigate(['/nots-user/' + user._id])
+  }
+
 }

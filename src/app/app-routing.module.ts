@@ -14,6 +14,10 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { AddOrganizationComponent } from './components/add-organization/add-organization.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { AddNotificationComponent } from './components/add-notification/add-notification.component';
+import { NotsUserComponent } from './components/nots-user/nots-user.component';
+import { EditNotComponent } from './components/edit-not/edit-not.component';
 
 const routes: Routes = [
   {
@@ -64,6 +68,23 @@ const routes: Routes = [
     path: 'edit-organization/:id',
     component: EditOrganizationComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'notifications',
+    component: NotificationsComponent,
+  },
+  {
+    path: 'add-notification',
+    component: AddNotificationComponent,
+  },
+  {
+    path: 'nots-user/:id',
+    component: NotsUserComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit-not/:id',
+    component:EditNotComponent,
   }
 ];
 

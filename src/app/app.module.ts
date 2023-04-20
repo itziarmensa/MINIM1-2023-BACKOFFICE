@@ -31,6 +31,10 @@ import { ConfirmDialogComponent } from './components/common/confirm-dialog/confi
 import { AddOrganizationComponent } from './components/add-organization/add-organization.component';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { AddNotificationComponent } from './components/add-notification/add-notification.component';
+import { NotsUserComponent } from './components/nots-user/nots-user.component';
+import { EditNotComponent } from './components/edit-not/edit-not.component';
 
 
 @NgModule({
@@ -47,7 +51,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
     OrganizationComponent,
     EditOrganizationComponent,
     ConfirmDialogComponent,
-    AddOrganizationComponent
+    AddOrganizationComponent,
+    NotificationsComponent,
+    AddNotificationComponent,
+    NotsUserComponent,
+    EditNotComponent
   ],
   imports: [
     BrowserModule,

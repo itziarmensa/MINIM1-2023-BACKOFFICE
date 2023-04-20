@@ -1,0 +1,46 @@
+<app-navigation></app-navigation>
+<div class="container app">
+    <div class="row">
+        <div class="col-sm-8">
+          <h2>Notifications List </h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Issuer</th>
+                <th>Receptor</th>
+                <th>State</th>
+                <th>
+                  <button class="btn-add" (click)="addNot()">Add notification</button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let notification of notifications; let i = index">
+                <td>{{notification.description}}</td>
+                <td>{{notification.issuer}}</td>
+                <td>{{notification.receptor}}</td>
+                <td>{{notification.state}}</td>
+                <td>
+                  <button (click)="passNot(notification)" class="btn-success">Edit</button>
+                  <button (click)="confirmDelete(notification._id)" class="btn-danger">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <div class="pagination">
+                    <button class="paginate-btn" [disabled]="currentPage === 1" (click)="prevPage()"><</button>
+                    <span>{{ currentPage }}/{{ totalPages }}</span>
+                    <button class="paginate-btn" [disabled]="currentPage === totalPages" (click)="nextPage()">></button>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+    </div>
+  </div>
+  
+

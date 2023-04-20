@@ -1,0 +1,26 @@
+<app-navigation></app-navigation>
+<div class="container app">
+    <div class="row">
+        <div class="col-sm-8">
+          <h2>Notifications List </h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Issuer</th>
+                <th>Receptor</th>
+                <th>State</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let notification of notifications; let i = index">
+                <td>{{notification.description}}</td>
+                <td>{{notification.issuer}}</td>
+                <td>{{notification.receptor}}</td>
+                <td>{{notification.state}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
